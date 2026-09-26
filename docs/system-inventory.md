@@ -90,17 +90,27 @@ The recorded aging settings for the administrator account were:
 
 ## Exceptions and Troubleshooting
 
-The project conversation records these decisions and findings:
+### Decisions Made During This Hardening Phase
 
-- Outbound traffic remained allowed; a tested egress allowlist was deferred.
-- SSH forwarding and the graphical interface were retained.
-- Partitioning changes were deferred.
-- Journald was selected instead of the alternative rsyslog configuration.
-- Remote journald controls were not implemented under the selected monitoring design; Wazuh monitoring does not itself demonstrate compliance with those controls.
-- A pam_pwquality scanner discrepancy was recorded: the configuration line and an independent matching test were present, while the scanner still reported failure.
-- SSH configuration precedence, PAM profile selection, and journald drop-in ordering required troubleshooting.
+- **Outbound firewall policy:** Outbound traffic remained allowed to preserve required lab services. A default-deny policy was deferred until an explicit egress allowlist could be designed and tested.
+- **SSH forwarding:** Forwarding was retained for lab functionality. This remains an intentional deviation from the assessed restriction.
+- **Graphical interface:** The GUI was retained for the endpoint's lab use.
+- **Partitioning:** Filesystem partitioning changes were deferred because they require separate planning and recovery preparation.
+- **Logging architecture:** Journald was selected instead of rsyslog. Checks for the alternative logging approach require applicability review rather than installing another logging service solely to improve the score.
+- **Remote journald:** Remote journald controls were not implemented. Wazuh provides security monitoring, but its presence does not demonstrate compliance with remote journald requirements.
 
-Remaining failed checks require individual classification. They are not all verified false positives or accepted risks.
+These decisions describe this project's scope. They do not establish that every remaining failed check is acceptable or inapplicable.
+
+### Troubleshooting Findings
+
+- **SSH configuration precedence:** The investigation identified a conflict involving 50-cloud-init.conf. Effective settings were checked with sshd -T.
+- **PAM profile selection:** A backup file unexpectedly appeared as a selectable PAM profile, requiring investigation of profile selection.
+- **Journald drop-in ordering:** An earlier override lost precedence to syslog.conf. The final configuration used zz-cyberpi-hardening.conf, and configuration ordering was checked.
+- **Password-quality scanner discrepancy:** Wazuh continued reporting a pam_pwquality failure despite the expected configuration line and a successful independent pattern match. This was recorded as an unresolved discrepancy; matching configuration text alone does not prove full enforcement or a scanner false positive.
+
+### Remaining Review
+
+The final assessment reported 79 failed checks. Each requires individual review before being classified as a deferred remediation, intentional exception, applicability issue, or confirmed scanner discrepancy.
 
 ## Evidence Status
 
