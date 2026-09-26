@@ -2,9 +2,7 @@
 
 ## Status
 
-The selected hardening phase was completed on September 26, 2026. Repository documentation and evidence packaging are in progress.
-
-This summary reflects the recorded project conversation and command outputs. It is not a new live assessment.
+The selected hardening phase was completed on September 26, 2026. This document summarizes the results, decisions, and supporting evidence assembled for the portfolio. Remaining documentation gaps are listed below.
 
 ## System Details
 
@@ -118,21 +116,17 @@ These decisions describe this project's scope. They do not establish that every 
 
 The final assessment reported 79 failed checks. Each requires individual review before being classified as a deferred remediation, intentional exception, applicability issue, or confirmed scanner discrepancy.
 
-## Evidence Status
+## Evidence Index
 
-The earlier conversation records completed captures for:
+The following screenshots document the selected hardening phase. Terminal captures record configuration and command output at capture time; they do not establish that every control passed a functional test.
 
-- System identification
-- Wazuh agent operation
-- Final SCA results
-- Journald configuration
-- Effective SSH configuration
-- UFW firewall rules
-- PAM password configuration
-- Account aging
-- Sudo activity logging
-
-The evidence files still need to be organized, reviewed for sensitive information, and linked in this repository.
+- [Baseline SCA assessment — September 21, 2026](../screenshots/cyberpi-sca-baseline-2026-09-21.png)
+- [Final SCA assessment — September 26, 2026](../screenshots/cyberpi-sca-final-2026-09-26.png)
+- [Effective SSH configuration](../screenshots/cyberpi-ssh-hardening-2026-09-26.png)
+- [UFW firewall configuration](../screenshots/cyberpi-ufw-firewall-2026-09-26.png)
+- [Journald configuration](../screenshots/cyberpi-journald-config-2026-09-26.png)
+- [PAM configuration, account aging, and sudo activity logs](../screenshots/cyberpi-authentication-sudo-evidence-2026-09-26.png)
+- [Wazuh agent status and version](../screenshots/cyberpi-wazuh-agent-2026-09-26.png)
 
 ## Details to Recover from Supporting Records
 

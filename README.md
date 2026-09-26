@@ -57,4 +57,8 @@ Troubleshooting covered SSH configuration precedence, PAM profile selection, jou
 
 ## Project Status
 
-The selected hardening phase and evidence capture are complete. Repository documentation, evidence
+The selected hardening phase and portfolio evidence package are complete. This repository documents the baseline and final assessment results, configuration evidence, troubleshooting findings, and intentional exceptions.
+
+The final assessment reported 79 failed checks; these remain subject to individual review. The exact benchmark revision/profile and other documentation gaps are listed in the system inventory. This project does not claim full CIS compliance.
+
+See the [evidence index](docs/system-inventory.md#evidence-index) for all seven supporting screenshots.
