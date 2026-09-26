@@ -41,6 +41,8 @@ The final scan completed on September 26, 2026. These are Wazuh policy results, 
 
 ### SSH
 
+[View effective SSH configuration evidence](../screenshots/cyberpi-ssh-hardening-2026-09-26.png)
+
 Effective configuration was inspected using sshd -T.
 
 - Root login prohibited
