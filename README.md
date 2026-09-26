@@ -15,6 +15,10 @@ The reported score increased by 18 percentage points, with 38 additional checks 
 
 These results describe the Wazuh SCA policy assessment. They do not establish full CIS compliance or certification.
 
+### Final Assessment Evidence
+
+![CyberPi Wazuh SCA results: 59%, 115 passed, 79 failed, and 13 not applicable](screenshots/cyberpi-sca-final-2026-09-26.png)
+
 ## Environment
 
 - Hardware: Raspberry Pi 5
