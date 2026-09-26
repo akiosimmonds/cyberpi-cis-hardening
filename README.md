@@ -15,6 +15,12 @@ The reported score increased by 18 percentage points, with 38 additional checks 
 
 These results describe the Wazuh SCA policy assessment. They do not establish full CIS compliance or certification.
 
+### Baseline Assessment Evidence
+
+September 21, 2026: 41% reported score, with 77 passed, 107 failed, and 23 not applicable.
+
+![CyberPi Wazuh SCA baseline results](screenshots/cyberpi-sca-baseline-2026-09-21.png)
+
 ### Final Assessment Evidence
 
 ![CyberPi Wazuh SCA results: 59%, 115 passed, 79 failed, and 13 not applicable](screenshots/cyberpi-sca-final-2026-09-26.png)
