@@ -58,6 +58,8 @@ Effective configuration was inspected using sshd -T.
 
 ### Host Firewall
 
+[View UFW firewall configuration evidence](../screenshots/cyberpi-ufw-firewall-2026-09-26.png)
+
 UFW was recorded as active with:
 
 - Default deny incoming
@@ -65,7 +67,7 @@ UFW was recorded as active with:
 - Default deny routed
 - Explicit rules supporting local SSH, Pi-hole DNS/web access, and Tailscale functionality
 
-The exact rules will be preserved in the firewall evidence.
+The linked screenshot records the exact firewall rules at evidence capture.
 
 ### Password and Account Controls
 
