@@ -86,6 +86,8 @@ The recorded aging settings for the administrator account were:
 
 ### Logging and Monitoring
 
+[View journald configuration evidence](../screenshots/cyberpi-journald-config-2026-09-26.png)
+
 - Wazuh agent enabled and running
 - SCA scan completion verified in the agent log
 - Journald configured with ForwardToSyslog=no, Compress=yes, and Storage=persistent
